@@ -13,14 +13,12 @@ arr = ""
 for x in s:
     while x != '/r/n':
         arr += x
-
-#uncomment to use alternate method
         
-# with open('nycCensus1.csv', 'w') as file:
-#     writer = csv.writer(file)
-#     for row in s:
-#         if row == 'Close\n':
-#             break
-#         else:
-#             x = row.rstrip().split(",")
-#             writer.writerow(x)
+with open('nycCensus1.csv', 'w') as file:
+    writer = csv.writer(file)
+    for row in s:
+        if row == 'Close\n':
+            break
+        else:
+            x = row.rstrip().split(",")
+            writer.writerow(x)
